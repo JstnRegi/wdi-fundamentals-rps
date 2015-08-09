@@ -119,6 +119,12 @@ function playToFive () {
     do {
         console.log(keepScore(getWinner('rock', getComputerMove())));
     } while (playerWins < 5 && computerWins < 5)
+    if (playerWins === 5) {
+        console.log('Player wins!');
+    }
+    if (computerWins === 5) {
+        console.log('Computer wins!');
+    }
 }
 
 
