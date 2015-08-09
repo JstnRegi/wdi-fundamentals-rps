@@ -30,7 +30,7 @@
         // If a `move` has a value, your expression should evaluate to that value.
         // However, if `move` is not specified / is null, your expression should equal `getInput()`.
         if (move != null) {
-            return randomPlay();
+            return move;
         }
         else return getInput();
     }
@@ -117,7 +117,7 @@ var computerWins = 0;
 //Created function that actually causes player to play until the player or the computer gets to 5
 function playToFive () {
     do {
-        console.log(keepScore(getWinner('rock', getComputerMove())));
+        console.log(keepScore(getWinner(getPlayerMove('rock'), getComputerMove())));
     } while (playerWins < 5 && computerWins < 5)
     if (playerWins === 5) {
         console.log('Player wins!');
@@ -130,5 +130,4 @@ function playToFive () {
 
 //calls function to playRPS and utilize all functions
 playToFive();
-
 
